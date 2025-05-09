@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Découvrez le WOM</title>
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="shortcut icon" href="images/favicon.png" />
+  <meta name="authoring-tool" content="Adobe_Animate_CC">
+
+
+</head>
+
+<body id="homepage"    onload="init();" style="margin:0px;"   >
+  <div class="nav-wrapper">
+    <nav id="nav">
+      <a id="logo" href="index.html">
+        <img src="images/logo.png" alt="logo" />
+      </a>
+      <a id="mobile-menu">Menu</a>
+      <ul id="menu-content">
+        <li>
+          <a href="index.html">Début</a>
+        </li>
+        <li class="dropdown current">
+          à découvrir
+          <ul class="dropdown-content">
+            <li><a href="canal.html">Canal</a></li>
+            <li><a href="hannibal.html">Hannibal</a></li>
+            <li><a href="omi.html">Omi</a></li>
+            <li><a href="padelclub.html">Padelclub</a></li>
+            <li><a href="parc.html">Parc</a></li>
+            <li><a href="the-waffle.html">Waffle</a></li>
+            <li><a href="tour&taxis.html">Tour&Taxis</a></li>
+            <li><a class="current" href="wom.html">WOM</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#carte">Carte</a></li>
+      </ul>
+    </nav>
+  </div>
+  <section class="hero">
+    <div class="title-content">
+      <p>WOM</p>
+      <p>Défiez votre cerveau avec le WOM !</p>
+    </div>
+  </section>
+  <section id="main">
+    <div class="row">
+      <div class="col-50">
+        <p>
+          Situé à Tour & Taxis dans un espace de plus de 1 500m², le WOM
+          “World of Mind” vous invite pour une expérience rythmée,
+          pleine de surprises et riche en émotions dans un parcours
+          immersif sur les perceptions et les illusions. Plus de 80
+          illusions visuelles, tactiles et auditives vous attendent, de
+          quoi questionner la réalité dans un univers interactif à
+          l’esthétique colorée.
+        </p>
+        <br>
+        <img src="images/content/wom05f.jpg" />
+        <img src="images/content/wom05c.jpg" />
+      </div>
+      <div class="col-50">
+        <img src="images/content/wom05b.jpg" />
+        <img src="images/content/wom05a.jpg" />
+
+        <p>
+          Retrouvez le neurologue Steven Laureys dans les corners de science
+          tout au long du parcours, pour en apprendre plus sur les cinq sens
+          et le fonctionnement de notre cerveau de manière ludique et
+          surprenante !
+        </p>
+
+
+        <h2 class="left">Infos pratiques</h2>
+        <p>Rue Willy de Bruyn Straat 00, 1000 Bruxelles, Belgique</p>
+        <h2 class="left">heures d'ouverture</h2>
+        <table>
+          <tr>
+            <th class="left" scope="row">Lundi</th>
+            <td class="right">14H – 19H</td>
+          </tr>
+          <tr>
+            <th class="left" scope="row">Mardi</th>
+            <td class="right">14H – 19H</td>
+          </tr>
+          <tr>
+            <th class="left" scope="row">Mercredi</th>
+            <td class="right">11H – 19H</td>
+          </tr>
+          <tr>
+            <th class="left" scope="row">Jeudi</th>
+            <td class="right">11H – 19H</td>
+          </tr>
+          <tr>
+            <th class="left" scope="row">Vendredi</th>
+            <td class="right">11H – 19H</td>
+          </tr>
+          <tr>
+            <th class="left" scope="row">Samedi</th>
+            <td class="right">11H – 19H</td>
+          </tr>
+          <tr>
+            <th class="left" scope="row">Dimanche</th>
+            <td class="right">11H – 19H</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="centered">
+      
+      <div class="centered"><script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+        <script src="testanimateP2_ Fabiana.js?1719822514396"></script>
+        <script>
+        var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+        function init() {
+          canvas = document.getElementById("canvas");
+          anim_container = document.getElementById("animation_container");
+          dom_overlay_container = document.getElementById("dom_overlay_container");
+          var comp=AdobeAn.getComposition("4A78A696E999E04D9C9ED8D7C1A539E5");
+          var lib=comp.getLibrary();
+          var loader = new createjs.LoadQueue(false);
+          loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+          loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+          var lib=comp.getLibrary();
+          loader.loadManifest(lib.properties.manifest);
+        }
+        function handleFileLoad(evt, comp) {
+          var images=comp.getImages();	
+          if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+        }
+        function handleComplete(evt,comp) {
+          //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+          var lib=comp.getLibrary();
+          var ss=comp.getSpriteSheet();
+          var queue = evt.target;
+          var ssMetadata = lib.ssMetadata;
+          for(i=0; i<ssMetadata.length; i++) {
+            ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+          }
+          exportRoot = new lib.testanimateP2_Fabiana();
+          stage = new lib.Stage(canvas);
+          stage.enableMouseOver();	
+          //Registers the "tick" event listener.
+          fnStartAnimation = function() {
+            stage.addChild(exportRoot);
+            createjs.Ticker.framerate = lib.properties.fps;
+            createjs.Ticker.addEventListener("tick", stage);
+          }	    
+          //Code to support hidpi screens and responsive scaling.
+          AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+          AdobeAn.compositionLoaded(lib.properties.id);
+          fnStartAnimation();
+        }
+        </script>
+  
+  
+  
+  
+  
+  
+  <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:600px; height:400px">
+    <canvas id="canvas" width="600" height="400" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+    <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:600px; height:400px; position: absolute; left: 0px; top: 0px; display: block;">
+    </div>
+  </div></div>
+      
+
+
+
+
+    </div>
+    <h2>D'autres Endroits</h2>
+
+
+
+    <div class="places centered">
+      <div class="item-wrap">
+        <a href="parc.html">
+          <img src="images/800x800/parc.jpg" alt="Parc" />
+          <div class="places-item-meta">
+            <h5>L'Arche Pierre Culot</h5>
+            <p>Parcs</p>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="item-wrap">
+        <a href="tour&taxis.html">
+          <img src="images/800x800/tour.jpg" alt="Tour&Taxis" />
+          <div class="places-item-meta">
+            <h5>Tour&Taxis</h5>
+            <p>Découvertes</p>
+          </div>
+      </div>
+      </a>
+    </div>
+    </div>
+  </section>
+
+  <footer>
+    <section>
+      <div class="row centered">
+        <p class="copyright">
+          &copy; Copyright 2024 | Design by <span>Fabiana Santos</span>
+        </p>
+      </div>
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+    <script src="main.js"></script>
+  </footer>
+</body>
+
+</html>
