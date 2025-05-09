@@ -1,12 +1,12 @@
 :root {
     /* colors */
-    --nav-bg-50: #12151b80;
+    --nav-bg-50: #0a0c0f80;
     --nav-bg-50-hover: #12151baa;
     --nav-bg: #40444a;
     --nav-bg-hover: #24262a;
     --color-light-gray: #C0CDD1;
-    --color-dark-gray: #575859;
-    --dark-bg: #12151b;
+    --color-dark-gray: #6c6d6e;
+    --dark-bg: #050505;
 
     /* Tailles */
     --size-desktop: 920px;
